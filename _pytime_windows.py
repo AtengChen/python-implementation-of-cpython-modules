@@ -475,7 +475,7 @@ _strtime_handlers = {
     'A': lambda tm: _weekdays_full[tm.tm_wday],
     'b': lambda tm: _months[tm.tm_mon - 1],
     'B': lambda tm: _months_full[tm.tm_mon - 1],
-    'w': lambda tm: str(tm.tm_wday),       # 0=Mon ¡­ 6=Sun
+    'w': lambda tm: str(tm.tm_wday),       # 0=Mon Â¡Â­ 6=Sun
     'j': lambda tm: _yday(tm),              # day of year
     '%': lambda tm: '%',
     }
@@ -639,6 +639,5 @@ std = info.StandardName
 dst = info.DaylightName
 tzname = std, dst
 
-
-import sys
-sys.modules["time"] = __import__(__name__)
+# import sys
+# sys.modules["time"] = __import__(__name__)
